@@ -1,24 +1,33 @@
+var numberOfTerms = 5;
+var data = [];
 function reset(){
-	$("#one").removeClass($('#one').attr('class')).addClass("number btn btn-info");
-	$("#two").removeClass($('#two').attr('class')).addClass("number btn btn-info");
-	$("#three").removeClass($('#three').attr('class')).addClass("number btn btn-info");
-	$("#four").removeClass($('#four').attr('class')).addClass("number btn btn-info");
-	$("#five").removeClass($('#five').attr('class')).addClass("number btn btn-info");
+	$('#workArea').empty();
+	$("#numberOfTerms").val("");
+	$("#numberOfTerms").prop("disabled",false);
+	$("#numberOfTermsLbl").prop("disabled",false);
 }
 
 function changeButton(id){
 	id = "#"+id;
-	$(id).removeClass($(id).attr('class').split(/\s+/)[2]).addClass("btn-danger");
+	if($(id).attr('class').split(/\s+/).length == 3 )
+		$(id).removeClass($(id).attr('class').split(/\s+/)[2]).addClass("btn-danger");
+	else
+		$(id).addClass("btn-danger");
 }
 
-function initialize(n){
-	var data=[]
-
-	for (var i = 0; i < n; i++) {
-		var o={
-			"id": i,
-			"class": "btn-info",
-		}
-		data.push(o);
+function initialize(){
+	
+	for(var i = 1; i<=numberOfTerms; i++)
+	{
+		$("#workArea").append('<div id="'+i+'" class="number btn" onclick="changeButton(this.id)">'+i+'</div>');
+		$("#"+i).removeClass($("#"+i).attr('class')).addClass("number btn");
+		$("#"+i).addClass("btn-info");
 	}
+}
+
+function setNumberOfTerms(){
+	numberOfTerms = $("#numberOfTerms").val();
+	$("#numberOfTerms").prop("disabled",true);
+	$("#numberOfTermsLbl").prop("disabled",true);
+	initialize();
 }

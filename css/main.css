@@ -1,12 +1,25 @@
-.header{
-	padding:20px;
-	margin:10px;
-	background-color: gray;
-}
 .number{
-	margin: 20px;
 	display: inline;
+	margin-left: 20px;
+	margin-right: 20px;
 }
 .area{
+	background-color: #3d57b5;
+	padding:20px;
+}
+.control{
+	background-color: white;
+	padding: 20px;
+	margin: 20px;
+	/*margin: 20px;
 	padding: 50px;
+	*/
+	color: white;
+}
+.jumbotron
+{
+  	background: #3d57b5;
+  	color: white;
+  	margin: 0px; 
+  	padding: 20px;
 }

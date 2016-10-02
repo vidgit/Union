@@ -2,24 +2,53 @@
 <html>
 <head>
 	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Union Find</title>
+	<link href="css/bootstrap.min.css" rel="stylesheet"></link>
+	<link href="css/bootstrap-theme.min.css" rel="stylesheet"></link>
 	<link href="css/main.css" rel="stylesheet"></link>
-	<link href="css/bootstrap.min.css" rel="stylesheet">
-	<link href="css/bootstrap-theme.min.css" rel="stylesheet">
 	<script src="js/jquery.min.js"></script>
 	<script src="js/main.js"></script>
 </head>
 <body>
-	<header class="header">
+	<header class="jumbotron">
 		<h1>Union Find</h1>
 	</header>
-	<div id="reset" class="number btn btn-info" onclick="reset()">RESET </div>
-	<div id="workArea" class="area">
-	    <div id="1" class="number btn btn-info" onclick="changeButton(this.id)">1</div>
-	    <div id="2" class="number btn btn-info" onclick="changeButton(this.id)">2</div>
-	    <div id="3" class="number btn btn-info" onclick="changeButton(this.id)">3</div>
-	    <div id="4" class="number btn btn-info" onclick="changeButton(this.id)">4</div>
-	    <div id="5" class="number btn btn-info" onclick="changeButton(this.id)">5</div>
+	<div class="control">
+	<div id="Control" class="row">
+		<div id="reset" class="btn btn-info col-xs-12 col-sm-2" onclick="reset()">RESET </div>
+		<br>
+		<br>
+	</div>
+	<div class="row">
+		<form class="form-horizontal">
+			<div class= "form-group col-sm-3">
+				<input id="numberOfTerms" type="number" class="form-control col-sm-6">
+				<button id="numberOfTermsLbl" for="numberOfTerms" class="btn btn-default control-label" onclick="setNumberOfTerms()"> &nbsp;&nbsp;Number of Terms</button>
+			</div>
+		</form>
+	</div>
+	<div class="row">
+		<div id="terminal">
+		<form class="form-horizontal">
+			<div class= "form-group col-sm-4">
+				<input id="p" type="number" class="form-control  col-sm-2" placeholder="First Number">
+			</div>
+			<div class= "form-group col-sm-4">
+				<input id="q" type="number" class="form-control  col-sm-2" placeholder="Second Number">
+			</div>
+		</form>
+		</div>
+	</div>
+	</div>
+	<div id="workArea" class="row area">
+	    <!--<div id="1" class="number btn" onclick="changeButton(this.id)">1</div>
+	    <div id="2" class="number btn" onclick="changeButton(this.id)">2</div>
+	    <div id="3" class="number btn" onclick="changeButton(this.id)">3</div>
+	    <div id="4" class="number btn" onclick="changeButton(this.id)">4</div>
+	    <div id="5" class="number btn" onclick="changeButton(this.id)">5</div>
+	    -->
 	</div>
 	<script src="js/bootstrap.min.js"></script>
 </body>

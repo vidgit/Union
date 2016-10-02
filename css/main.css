@@ -1,0 +1,12 @@
+.header{
+	padding:20px;
+	margin:10px;
+	background-color: gray;
+}
+.number{
+	margin: 20px;
+	display: inline;
+}
+.area{
+	padding: 50px;
+}

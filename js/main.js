@@ -1,6 +1,7 @@
 var numberOfTerms = 5;
 var data = [];
 function reset(){
+	/*alert("reset");*/
 	$('#workArea').empty();
 	$("#numberOfTerms").val("");
 	$("#numberOfTerms").prop("disabled",false);
@@ -16,12 +17,11 @@ function changeButton(id){
 }
 
 function initialize(){
-	
+	/*alert("init");*/
 	for(var i = 1; i<=numberOfTerms; i++)
 	{
 		$("#workArea").append('<div id="'+i+'" class="number btn" onclick="changeButton(this.id)">'+i+'</div>');
-		$("#"+i).removeClass($("#"+i).attr('class')).addClass("number btn");
-		$("#"+i).addClass("btn-info");
+		$("#"+i).addClass("number btn btn-info");
 	}
 }
 
